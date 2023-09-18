@@ -7,6 +7,7 @@ import NavbarActions from "./navbar-actions";
 import Image from "next/image";
 import { Menu } from "lucide-react";
 import MobileMainNav from "./mobile-main-nav";
+export const revalidate = 0;
 
 const Navbar = async () => {
   const categories = await getCategories()
