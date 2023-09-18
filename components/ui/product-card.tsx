@@ -43,7 +43,7 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
           src={data?.images?.[0].url}
           className="aspect-square object-cover rounded-md "
         />
-        <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
+        <div className="opacity-0 hidden md:block lg:block group-hover:opacity-100 transition absolute w-full px-6 bottom-5">
           <div className="flex gap-x-6 justify-center">
             <IconButton
               onClick={onPreview}
@@ -71,7 +71,8 @@ const ProductCard: React.FC<ProductCard> = ({ data }) => {
         <Currency value={data?.price}/>
       </div>
         <p>
-          {data?.description}
+          {data?.description.substring(0,50)}
+          {data?.description.length > 50 && "..."}
         </p>
     </div>
   );

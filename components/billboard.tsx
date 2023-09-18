@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Billboard as BillboardType } from "@/types";
 import Image from "next/image";
 
@@ -7,9 +8,8 @@ interface BillboardProps {
 }
 
 const Billboard: React.FC<BillboardProps> = ({ data, home }) => {
-  console.log(data);
   return (
-    <div className={`sm:p-6 object-center rounded-xl overflow-hidden relative mb-3 `}>
+    <div className={cn(`sm:p-6 object-center  overflow-hidden relative mb-3`)}>
       <Image
         width={0} 
         height={0} 

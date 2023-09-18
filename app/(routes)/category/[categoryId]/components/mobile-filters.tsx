@@ -9,8 +9,8 @@ import { useState, Fragment } from "react";
 import Filter from "./filter";
 
 interface MobileFiltersProps {
-  sizes: Size[];
-  types: Type[];
+  sizes?: Size[];
+  types?: Type[];
 }
 
 const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, types }) => {
@@ -52,8 +52,8 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({ sizes, types }) => {
                   <IconButton icon={<X size={15} />} onClick={onClose} />
                 </div>
                 <div className="p-4">
-                  <Filter valueKey="sizeId" name="Sizes" data={sizes} />
-                  <Filter valueKey="typeId" name="Molecule Type" data={types}  />
+                  {sizes && <Filter valueKey="sizeId" name="Sizes" data={sizes} />}
+                  {types && <Filter valueKey="typeId" name="Molecule Type" data={types}  />}
                 </div>
               </Dialog.Panel>
             </Transition.Child>

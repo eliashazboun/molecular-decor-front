@@ -59,16 +59,16 @@ const MobileMainNav: React.FC<MobileMainNavProps> = ({ data }) => {
                 <div className="flex items-center justify-end px-4">
                   <IconButton icon={<X size={15} />} onClick={onClose} />
                 </div>
-                <h1>Categories</h1>
-                <nav className=" flex flex-col justify-start align gap-3 mt-5 ">
+                <h1 className="text-center text-green-500 font-bold text-2xl">Categories</h1>
+                <nav className=" flex flex-col justify-start align gap-3 mt-5 items-center">
                   {routes.map((route) => (
                     <Link
                       key={route.href}
                       href={route.href}
                       onClick={onClose}
                       className={cn(
-                        "text-2xl font-medium transition-colors  hover:text-black",
-                        route.active ? "text-black font-xl" : "text-neutral-500"
+                        "text-lg font-medium transition-colors  hover:text-black",
+                        route.active ? "text-black text-xl underline" : "text-neutral-500"
                       )}
                     >
                       {route.label}

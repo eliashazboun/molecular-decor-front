@@ -9,6 +9,8 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import toast from "react-hot-toast/headless";
 import { Loader2 } from "lucide-react";
+export const revalidate = 0;
+
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -34,7 +36,6 @@ const Summary = () => {
 
   const onCheckout = async () => {
     try {
-
       setLoading(true);
       const response = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
