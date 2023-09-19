@@ -6,6 +6,8 @@ import Currency from "@/components/ui/currency";
 import useCart from "@/hooks/use-cart";
 import { Product } from "@/types";
 import QuantitySelector from '@/components/quantity-selector'
+export const revalidate = 0;
+
 
 interface CartItemProps {
   data: Product;

@@ -5,6 +5,8 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import ModalProvider from '@/providers/modal-provider'
 import ToastProvider from '@/providers/toast-provider'
+export const revalidate = 0;
+
 
 const font = Urbanist({ subsets: ['latin'] })
 

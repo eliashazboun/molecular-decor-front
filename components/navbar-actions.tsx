@@ -6,6 +6,8 @@ import useCart from "@/hooks/use-cart";
 import { useRouter } from "next/navigation";
 import MobileMainNav from "./mobile-main-nav";
 import { Category } from "@/types";
+export const revalidate = 0;
+
 
 interface NavbarActionsProps{
   data: Category[];

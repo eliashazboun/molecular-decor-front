@@ -4,6 +4,8 @@ import { Category } from "@/types";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+export const revalidate = 0;
+
 interface MainNavProps {
   data: Category[];
 }

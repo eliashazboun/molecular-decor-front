@@ -9,6 +9,7 @@ import { Category } from "@/types";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+export const revalidate = 0;
 
 interface MobileMainNavProps {
   data: Category[];
